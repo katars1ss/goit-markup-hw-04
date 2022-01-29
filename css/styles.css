@@ -59,7 +59,7 @@ img {
     margin: 0;
     padding: 94px 0 94px 0;
 }
-.link {
+a {
     text-decoration: none;
 }
 .list {
@@ -190,8 +190,6 @@ img {
 }
 
 .contact-icon {
-    width: 16px;
-    height: 12px;
     margin-right: 10px;
     fill: currentColor;
 }
@@ -208,7 +206,7 @@ img {
 }
 .footer-content {
     display: flex;
-    align-items: center;
+    align-items: top;
 }
 .footer-logo {
     display: inline-block;
@@ -232,6 +230,7 @@ img {
 
 .footer-networks {
     margin-left: 70px;
+    padding-top: 12px;
 }
 .footer-networks-title {
     margin-bottom: 20px;
@@ -263,8 +262,6 @@ img {
     background: var(--accent-color);
 }
 .footer-networks-icon {
-    width: 20px;
-    height: 20px;
     fill: var(--white-text-color);
 }
 
@@ -357,10 +354,7 @@ img {
 .features-decor-item + .features-decor-item {
     margin-left: var(--card-set-gap);
 }
-.features-decor-icon {
-    width: 70px;
-    height: 70px;
-}
+
 .features-list {
     display: flex;
     flex-wrap: wrap;
@@ -449,7 +443,7 @@ img {
     height: auto;
 }
 .team-text {
-    padding: var(--card-set-gap);
+    padding: var(--card-set-gap) var(--card-set-gap) 16px var(--card-set-gap);
     text-align: center;
 }
 .team-name {
@@ -471,12 +465,15 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0 var(--card-set-gap) var(--card-set-gap) var(--card-set-gap);
 }
 .team-networks-item {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    border: 1px solid tomato;
+}
+.team-networks-item + .team-networks-item {
+    margin-left: 10px;
 }
 .team-networks-link {
     display: flex;
@@ -489,13 +486,12 @@ img {
     border-radius: 50%;
     color: #afb1b8;
 }
-.team-networks-link:hover {
+.team-networks-link:hover,
+.team-networks-link:focus {
     background: var(--accent-color);
-    fill: var(--white-text-color);
+    color: var(--white-text-color);
 }
 .networks-icon {
-    width: 20px;
-    height: 20px;
     fill:currentColor;
 }
 
@@ -532,8 +528,6 @@ img {
     border-radius: 4px;
 }
 .our-clients-icon {
-    width: 106;
-    height: 60px;
     fill: currentColor;
 }
 .our-clients-link:hover,
@@ -592,8 +586,12 @@ img {
 .portfolio-item {
     margin: 15px;
     flex-basis: calc(100% / 3 - var(--card-set-gap));
-
+}
+ .portfolio-card {
     background-color: var(--primery-bg-color);
+ }
+.portfolio-card:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .portfolio-card-img {
     display: block;

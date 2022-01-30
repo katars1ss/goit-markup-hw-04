@@ -206,7 +206,7 @@ a {
 }
 .footer-content {
     display: flex;
-    align-items: top;
+    align-items: baseline;
 }
 .footer-logo {
     display: inline-block;
@@ -230,7 +230,6 @@ a {
 
 .footer-networks {
     margin-left: 70px;
-    padding-top: 12px;
 }
 .footer-networks-title {
     margin-bottom: 20px;
@@ -332,28 +331,6 @@ a {
     width: 0;
     height: 0;
 }
-.features-decor-list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-.features-decor-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin-bottom: var(--card-set-gap);
-
-    width: 270px;
-    height: 120px;
-
-    background-color: var(--secondary-bg-color);
-    border-radius: 4px;
-}
-.features-decor-item + .features-decor-item {
-    margin-left: var(--card-set-gap);
-}
 
 .features-list {
     display: flex;
@@ -364,9 +341,23 @@ a {
 }
 .features-item {
     flex-basis: calc(100% / 4 - var(--card-set-gap));
-    margin-left: var(--card-set-gap);
-
     background-color: var(--primery-bg-color);
+}
+.features-item + .features-item {
+    margin-left: var(--card-set-gap);
+}
+
+.features-decor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--card-set-gap);
+
+    width: 270px;
+    height: 120px;
+
+    background-color: var(--secondary-bg-color);
+    border-radius: 4px;
 }
 
 .features-item-title {
@@ -443,7 +434,7 @@ a {
     height: auto;
 }
 .team-text {
-    padding: var(--card-set-gap) var(--card-set-gap) 16px var(--card-set-gap);
+    padding: var(--card-set-gap) 32px;
     text-align: center;
 }
 .team-name {
@@ -455,6 +446,7 @@ a {
     letter-spacing: 0.03em;
 }
 .team-position {
+    margin-bottom: 16px;
     font-size: 16px;
     line-height: 1.18;
     letter-spacing: 0.03em;
@@ -465,7 +457,6 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 var(--card-set-gap) var(--card-set-gap) var(--card-set-gap);
 }
 .team-networks-item {
     width: 44px;
@@ -551,11 +542,8 @@ a {
     justify-content: center;
     margin-bottom: 50px;
 }
-.portfolio-filter-item {
-    margin-right: 8px;
-}
-.portfolio-filter-item:last-child {
-    margin-right: 0;
+.portfolio-filter-item + .portfolio-filter-item {
+    margin-left: 8px;
 }
 .portfolio-filter-btn {
     padding: 6px 22px;
@@ -590,7 +578,8 @@ a {
  .portfolio-card {
     background-color: var(--primery-bg-color);
  }
-.portfolio-card:hover {
+.portfolio-card:hover,
+.portfolio-card:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .portfolio-card-img {
